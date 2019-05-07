@@ -121,7 +121,7 @@ def produce_candidates_color(tree):
     relations = defaultdict(set)
     for node in nodes:
         anchors_i = node.getElements()
-        neighbors = tree.find_neighbors(node, tree.root, query.neighbor_limit * 30, [])
+        neighbors = tree.find_neighbors(node, tree.root, query.neighbor_limit, [])
         neighbors_size = len(neighbors)
 
         if neighbors_size > 1:
